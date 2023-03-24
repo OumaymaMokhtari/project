@@ -19,20 +19,12 @@ class CreateArticlesTable extends Migration
             $table->string('title_ar');
             $table->text('body');
             $table->text('body_ar');
-            $table->string('image');
-            $table->timestamp('date')->nullable();
+            $table->string('image')->nullable();
+            $table->dateTime('date');
             $table->timestamps();
         });
 
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('articles');
-    }
+    
 }
